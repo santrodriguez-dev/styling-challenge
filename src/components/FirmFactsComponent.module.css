@@ -12,6 +12,7 @@
 }
 
 .card {
+  overflow: hidden;
   background: #FFFFFF;
   height: 322px;
   padding: 50px 25px;
@@ -42,14 +43,13 @@
   border: 1px solid transparent;
   padding: 11px 27px;
   border-radius: 50px;
-  flex: 1;
   text-align: center;
   resize: none;
   transition: background 0.5s, color 0.5s, border 0.5s;
   display: flex;
   gap: 16px;
   align-items: center;
-  max-width: 280px;
+  max-width: 100%;
   justify-content: center;
 }
 

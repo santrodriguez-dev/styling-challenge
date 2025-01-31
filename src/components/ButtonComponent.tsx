@@ -7,7 +7,7 @@ type Variants = 'icon' | 'default';
 
 export function ButtonComponent({ disabled, icon = true }: { disabled?: boolean, icon?: boolean }) {
 
-  const Button = styled.button<{ variant: Variants }>`
+  const Button = styled.button<{ variant?: Variants }>`
   `;
 
   const TextButton = styled.span<{ variant: Variants }>`
@@ -28,7 +28,7 @@ export function ButtonComponent({ disabled, icon = true }: { disabled?: boolean,
 
 
   return (
-    <Button className={styles['button']} disabled={disabled} variant={icon ? 'icon' : 'default'}>
+    <Button className={styles['button']} disabled={disabled}>
       {icon && <SearchIcon />}
       <TextButton className={styles['text-button']} variant={icon ? 'icon' : 'default'}>This is a two line button that terminates with </TextButton>
     </Button>
